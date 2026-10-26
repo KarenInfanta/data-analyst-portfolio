@@ -1,0 +1,920 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d1b">
+
+  <meta name="description"
+        content="Karen Infanta's portfolio for Data Analyst and Business Intelligence Analyst opportunities. Explore analytics projects, skills and interactive visualizations.">
+
+  <title>Karen Infanta | Data Analyst Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"
+          defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="#home" aria-label="Karen Infanta, home">
+        <span class="brand-mark">KI</span>
+        <span>Karen Infanta<span class="brand-dot">.</span></span>
+      </a>
+
+      <button class="menu-toggle"
+              id="menu-toggle"
+              type="button"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="primary-navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="primary-navigation"
+           class="primary-navigation"
+           aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#analytics">Analytics</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="nav-contact">Contact ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+          <div class="availability">
+            <span class="status-dot"></span>
+            COMPUTER SCIENCE ENGINEERING · CLASS OF 2026
+          </div>
+
+          <p class="eyebrow">HELLO, I'M</p>
+
+          <h1>Karen <span class="gradient-text">Infanta.</span></h1>
+
+          <h2>
+            Aspiring Data Analyst
+            <span class="hero-separator">|</span>
+            <br>
+            Business Intelligence Analyst
+          </h2>
+
+          <p class="hero-description">
+            I’m a final-year Computer Science and Engineering student
+            interested in turning raw data into meaningful insights,
+            building intuitive dashboards, and supporting better
+            business decisions through analytical thinking.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">
+              Explore Projects <span aria-hidden="true">↗</span>
+            </a>
+
+            <a class="button button-secondary" href="assets/resume.pdf"
+               id="resume-button" download>
+              Download Resume <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <a class="hero-contact-link" href="#contact">
+            Let's connect <span aria-hidden="true">→</span>
+          </a>
+
+          <p class="resume-status" id="resume-status"
+             role="status" aria-live="polite"></p>
+        </div>
+
+        <!-- CSS-built visual: no image API required -->
+        <div class="hero-visual" aria-label="Decorative analytics dashboard"
+             role="img">
+          <div class="visual-orbit orbit-one"></div>
+          <div class="visual-orbit orbit-two"></div>
+
+          <div class="floating-chip chip-top">
+            <span class="chip-icon">↗</span>
+            <span>
+              <small>DATA INSIGHTS</small>
+              <strong>Think analytically</strong>
+            </span>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="dashboard-top">
+              <div>
+                <span class="mini-label">ANALYTICS STUDIO</span>
+                <h3>Data overview</h3>
+              </div>
+              <span class="live-indicator">DEMO</span>
+            </div>
+
+            <div class="dashboard-stat">
+              <div>
+                <span class="mini-label">VISUALIZE</span>
+                <strong>01</strong>
+              </div>
+              <div>
+                <span class="mini-label">ANALYZE</span>
+                <strong>02</strong>
+              </div>
+              <div>
+                <span class="mini-label">INTERPRET</span>
+                <strong>03</strong>
+              </div>
+            </div>
+
+            <div class="mini-chart" aria-hidden="true">
+              <div class="chart-gridline"></div>
+              <div class="chart-gridline"></div>
+              <div class="chart-gridline"></div>
+
+              <div class="mini-bars">
+                <span style="--bar-height: 38%"></span>
+                <span style="--bar-height: 57%"></span>
+                <span style="--bar-height: 45%"></span>
+                <span style="--bar-height: 78%"></span>
+                <span style="--bar-height: 62%"></span>
+                <span style="--bar-height: 92%"></span>
+                <span style="--bar-height: 73%"></span>
+                <span style="--bar-height: 100%"></span>
+              </div>
+            </div>
+
+            <div class="dashboard-bottom">
+              <span><i class="legend-cyan"></i> Discover patterns</span>
+              <span><i class="legend-purple"></i> Find opportunities</span>
+            </div>
+          </div>
+
+          <div class="floating-chip chip-bottom">
+            <span class="sparkle-icon">✳</span>
+            <span>
+              <small>MY APPROACH</small>
+              <strong>Insight over noise</strong>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="container hero-footer">
+        <span>CURIOUS BY NATURE</span>
+        <span class="hero-footer-line"></span>
+        <span>DATA-DRIVEN BY DESIGN</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">01 / ABOUT ME</p>
+          <h2>Curiosity meets <span class="gradient-text">analytics.</span></h2>
+          <p>Building the foundation to make data more useful.</p>
+        </div>
+
+        <div class="about-grid">
+          <article class="surface about-card">
+            <div class="section-icon" aria-hidden="true">◎</div>
+            <h3>My background</h3>
+            <p>
+              I am a final-year Bachelor of Engineering student in
+              Computer Science and Engineering, graduating in 2026.
+              My academic background has shaped my interest in
+              problem-solving, technology, and structured thinking.
+            </p>
+          </article>
+
+          <article class="surface about-card">
+            <div class="section-icon purple-icon" aria-hidden="true">⌘</div>
+            <h3>My interests</h3>
+            <p>
+              I am interested in data analytics, business intelligence,
+              data visualization, and statistical analysis. I want to
+              understand what the data says, why it matters, and how
+              it can inform practical business decisions.
+            </p>
+          </article>
+
+          <article class="surface about-card">
+            <div class="section-icon" aria-hidden="true">↗</div>
+            <h3>My direction</h3>
+            <p>
+              I am developing my analytical toolkit through practical
+              projects, data exploration, dashboard design, and
+              continuous learning, with the goal of contributing to
+              data-informed teams.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">02 / TOOLKIT</p>
+          <h2>Skills & <span class="gradient-text">capabilities.</span></h2>
+          <p>A foundation for exploring data and communicating insights.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="surface skill-card">
+            <span class="skill-number">01</span>
+            <span class="skill-icon">Py</span>
+            <h3>Python</h3>
+            <p>Programming for data analysis and exploration.</p>
+          </article>
+
+          <article class="surface skill-card">
+            <span class="skill-number">02</span>
+            <span class="skill-icon purple-skill">SQL</span>
+            <h3>SQL / MySQL</h3>
+            <p>Working with structured data and queries.</p>
+          </article>
+
+          <article class="surface skill-card">
+            <span class="skill-number">03</span>
+            <span class="skill-icon green-skill">Ex</span>
+            <h3>Excel</h3>
+            <p>Spreadsheet-based analysis and reporting.</p>
+          </article>
+
+          <article class="surface skill-card">
+            <span class="skill-number">04</span>
+            <span class="skill-icon purple-skill">BI</span>
+            <h3>Power BI</h3>
+            <p>Business intelligence and dashboard concepts.</p>
+          </article>
+
+          <article class="surface skill-card">
+            <span class="skill-number">05</span>
+            <span class="skill-icon">01</span>
+            <h3>Data Cleaning</h3>
+            <p>Preparing data for consistent analysis.</p>
+          </article>
+
+          <article class="surface skill-card">
+            <span class="skill-number">06</span>
+            <span class="skill-icon purple-skill">EDA</span>
+            <h3>Exploratory Analysis</h3>
+            <p>Examining distributions, patterns, and relationships.</p>
+          </article>
+
+          <article class="surface skill-card">
+            <span class="skill-number">07</span>
+            <span class="skill-icon green-skill">Viz</span>
+            <h3>Data Visualization</h3>
+            <p>Communicating data through visual representations.</p>
+          </article>
+
+          <article class="surface skill-card">
+            <span class="skill-number">08</span>
+            <span class="skill-icon purple-skill">Σ</span>
+            <h3>Statistical Analysis</h3>
+            <p>Using statistical methods to investigate questions.</p>
+          </article>
+        </div>
+
+        <p class="section-note">
+          Skills are listed without proficiency ratings or unverified credentials.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">03 / SELECTED WORK</p>
+          <h2>Projects with a <span class="gradient-text">purpose.</span></h2>
+          <p>
+            Sample project concepts designed to demonstrate an analytical
+            workflow. Replace these templates with your actual work.
+          </p>
+        </div>
+
+        <div class="project-toolbar">
+          <div class="filter-group" role="group" aria-label="Filter projects">
+            <button class="filter-button active"
+                    type="button" data-filter="all" aria-pressed="true">
+              All projects
+            </button>
+            <button class="filter-button"
+                    type="button" data-filter="healthcare" aria-pressed="false">
+              Healthcare
+            </button>
+            <button class="filter-button"
+                    type="button" data-filter="business" aria-pressed="false">
+              Business
+            </button>
+            <button class="filter-button"
+                    type="button" data-filter="data" aria-pressed="false">
+              Data analysis
+            </button>
+          </div>
+
+          <span class="project-count" id="project-count" aria-live="polite">
+            6 project templates
+          </span>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+
+          <article class="surface project-card" data-category="healthcare">
+            <div class="project-visual project-visual-health">
+              <span class="project-type">HEALTHCARE ANALYTICS</span>
+              <div class="project-bars" aria-hidden="true">
+                <i style="--h: 35%"></i>
+                <i style="--h: 70%"></i>
+                <i style="--h: 50%"></i>
+                <i style="--h: 85%"></i>
+                <i style="--h: 62%"></i>
+                <i style="--h: 100%"></i>
+              </div>
+              <span class="project-visual-caption">Dashboard concept</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span>PROJECT TEMPLATE 01</span>
+                <span class="template-badge">PLACEHOLDER</span>
+              </div>
+              <h3>Healthcare Analytics Dashboard</h3>
+              <p>
+                <strong>Business problem:</strong>
+                How can healthcare data help stakeholders understand
+                service utilization and operational trends?
+              </p>
+              <p>
+                <strong>Approach:</strong>
+                Prepare a public dataset, examine key indicators, compare
+                trends, and design an interactive dashboard.
+              </p>
+              <p>
+                <strong>Deliverables:</strong>
+                KPI cards, trend visualizations, filters, and documented
+                analytical observations. Findings are not yet supplied.
+              </p>
+              <div class="tag-list">
+                <span>Power BI</span><span>Excel</span><span>SQL</span>
+              </div>
+              <a class="project-link"
+                 href="https://github.com/KarenInfanta"
+                 target="_blank" rel="noopener noreferrer">
+                Add repository ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="surface project-card" data-category="business">
+            <div class="project-visual project-visual-churn">
+              <span class="project-type">CUSTOMER ANALYTICS</span>
+              <div class="donut-decoration" aria-hidden="true"></div>
+              <span class="project-visual-caption">Retention concept</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span>PROJECT TEMPLATE 02</span>
+                <span class="template-badge">PLACEHOLDER</span>
+              </div>
+              <h3>Customer Churn Analysis</h3>
+              <p>
+                <strong>Business problem:</strong>
+                Which customer characteristics may be associated with
+                customer attrition?
+              </p>
+              <p>
+                <strong>Approach:</strong>
+                Inspect customer records, explore churn patterns, compare
+                relevant segments, and assess potential relationships.
+              </p>
+              <p>
+                <strong>Deliverables:</strong>
+                Segment comparisons, churn metrics, and recommendations
+                supported by actual dataset findings.
+              </p>
+              <div class="tag-list">
+                <span>Python</span><span>SQL</span><span>EDA</span>
+              </div>
+              <a class="project-link"
+                 href="https://github.com/KarenInfanta"
+                 target="_blank" rel="noopener noreferrer">
+                Add repository ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="surface project-card" data-category="business">
+            <div class="project-visual project-visual-sales">
+              <span class="project-type">SALES INTELLIGENCE</span>
+              <div class="sales-line" aria-hidden="true">
+                <svg viewBox="0 0 300 110" role="presentation">
+                  <polyline points="0,85 45,65 85,77 125,40 165,52 210,20 250,34 300,8"
+                            fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="project-visual-caption">Trend concept</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span>PROJECT TEMPLATE 03</span>
+                <span class="template-badge">PLACEHOLDER</span>
+              </div>
+              <h3>Sales Performance Dashboard</h3>
+              <p>
+                <strong>Business problem:</strong>
+                How can a business monitor revenue, product performance,
+                and changes across reporting periods?
+              </p>
+              <p>
+                <strong>Approach:</strong>
+                Calculate sales KPIs, compare products and regions, and
+                examine trends over time.
+              </p>
+              <p>
+                <strong>Deliverables:</strong>
+                Sales summaries, product comparisons, time-based trends,
+                and an interactive dashboard.
+              </p>
+              <div class="tag-list">
+                <span>Power BI</span><span>Excel</span><span>SQL</span>
+              </div>
+              <a class="project-link"
+                 href="https://github.com/KarenInfanta"
+                 target="_blank" rel="noopener noreferrer">
+                Add repository ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="surface project-card" data-category="data">
+            <div class="project-visual project-visual-eda">
+              <span class="project-type">EXPLORATORY ANALYSIS</span>
+              <div class="scatter-decoration" aria-hidden="true">
+                <i style="--x: 12%; --y: 65%"></i>
+                <i style="--x: 24%; --y: 45%"></i>
+                <i style="--x: 32%; --y: 73%"></i>
+                <i style="--x: 44%; --y: 35%"></i>
+                <i style="--x: 53%; --y: 55%"></i>
+                <i style="--x: 64%; --y: 25%"></i>
+                <i style="--x: 73%; --y: 38%"></i>
+                <i style="--x: 88%; --y: 12%"></i>
+              </div>
+              <span class="project-visual-caption">Exploration concept</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span>PROJECT TEMPLATE 04</span>
+                <span class="template-badge">PLACEHOLDER</span>
+              </div>
+              <h3>Exploratory Data Analysis</h3>
+              <p>
+                <strong>Business problem:</strong>
+                What patterns, distributions, relationships, and anomalies
+                can be discovered in an unfamiliar dataset?
+              </p>
+              <p>
+                <strong>Approach:</strong>
+                Profile variables, calculate descriptive statistics,
+                visualize distributions, and investigate relationships.
+              </p>
+              <p>
+                <strong>Deliverables:</strong>
+                Reproducible notebook, visualizations, and documented
+                observations based on a selected dataset.
+              </p>
+              <div class="tag-list">
+                <span>Python</span><span>EDA</span><span>Statistics</span>
+              </div>
+              <a class="project-link"
+                 href="https://github.com/KarenInfanta"
+                 target="_blank" rel="noopener noreferrer">
+                Add repository ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="surface project-card" data-category="data">
+            <div class="project-visual project-visual-cleaning">
+              <span class="project-type">DATA QUALITY</span>
+              <div class="quality-rows" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <span class="project-visual-caption">Quality review concept</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span>PROJECT TEMPLATE 05</span>
+                <span class="template-badge">PLACEHOLDER</span>
+              </div>
+              <h3>Data Cleaning & Quality Analysis</h3>
+              <p>
+                <strong>Business problem:</strong>
+                How can incomplete, inconsistent, or duplicated records
+                affect the reliability of downstream reporting?
+              </p>
+              <p>
+                <strong>Approach:</strong>
+                Profile missing values, identify duplicates, validate
+                formats, and document cleaning decisions.
+              </p>
+              <p>
+                <strong>Deliverables:</strong>
+                Reusable cleaning workflow, quality checks, and a
+                transparent before-and-after comparison.
+              </p>
+              <div class="tag-list">
+                <span>Python</span><span>SQL</span><span>Excel</span>
+              </div>
+              <a class="project-link"
+                 href="https://github.com/KarenInfanta"
+                 target="_blank" rel="noopener noreferrer">
+                Add repository ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="surface project-card" data-category="business">
+            <div class="project-visual project-visual-kpi">
+              <span class="project-type">BUSINESS PERFORMANCE</span>
+              <div class="kpi-tiles" aria-hidden="true">
+                <i></i><i></i><i></i><i></i>
+              </div>
+              <span class="project-visual-caption">KPI framework concept</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span>PROJECT TEMPLATE 06</span>
+                <span class="template-badge">PLACEHOLDER</span>
+              </div>
+              <h3>Business KPI Analysis</h3>
+              <p>
+                <strong>Business problem:</strong>
+                How can an organization translate strategic objectives
+                into measurable performance indicators?
+              </p>
+              <p>
+                <strong>Approach:</strong>
+                Define KPIs, validate metric calculations, compare
+                performance against available targets, and investigate
+                differences across business segments.
+              </p>
+              <p>
+                <strong>Deliverables:</strong>
+                KPI definitions, a reporting dashboard, and a documented
+                performance review.
+              </p>
+              <div class="tag-list">
+                <span>Power BI</span><span>SQL</span><span>Excel</span>
+              </div>
+              <a class="project-link"
+                 href="https://github.com/KarenInfanta"
+                 target="_blank" rel="noopener noreferrer">
+                Add repository ↗
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="empty-projects" id="empty-projects" hidden>
+          No project templates match this category.
+        </p>
+
+        <div class="project-disclaimer">
+          <span aria-hidden="true">ⓘ</span>
+          These are proposed project templates, not claims of completed
+          work. Repository links point to the GitHub profile until you
+          replace them with individual project repositories.
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE ANALYTICS -->
+    <section class="section section-alt" id="analytics">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">04 / DATA VISUALIZATION</p>
+          <h2>Explore the <span class="gradient-text">data.</span></h2>
+          <p>
+            Interactive charts built with Chart.js using illustrative
+            demonstration data.
+          </p>
+        </div>
+
+        <div class="demo-notice">
+          <span aria-hidden="true">ⓘ</span>
+          <div>
+            <strong>Demonstration only</strong>
+            <p>
+              Every value in this section is fictional and illustrative.
+              It does not represent actual company performance, real
+              customers, or healthcare outcomes.
+            </p>
+          </div>
+        </div>
+
+        <div class="analytics-controls surface">
+          <label for="dataset-select">Illustrative dataset</label>
+          <select id="dataset-select">
+            <option value="sales">Sample sales data</option>
+            <option value="visits">Sample service visits</option>
+          </select>
+
+          <label for="period-select">Reporting period</label>
+          <select id="period-select">
+            <option value="all">All periods</option>
+            <option value="first">First three periods</option>
+            <option value="last">Last three periods</option>
+          </select>
+
+          <button class="button button-secondary button-small"
+                  id="reset-charts" type="button">
+            Reset filters
+          </button>
+        </div>
+
+        <p id="chart-status" class="chart-status"
+           role="status" aria-live="polite"></p>
+
+        <div class="analytics-grid">
+          <article class="surface chart-card">
+            <div class="chart-heading">
+              <div>
+                <span class="mini-label">COMPARATIVE ANALYSIS</span>
+                <h3 id="bar-chart-title">Monthly sales comparison</h3>
+              </div>
+              <span class="chart-icon" aria-hidden="true">▥</span>
+            </div>
+
+            <p class="chart-description" id="bar-chart-description">
+              Illustrative sales values in arbitrary units.
+            </p>
+
+            <div class="chart-container">
+              <canvas id="bar-chart"
+                      role="img"
+                      aria-label="Bar chart comparing illustrative values across reporting periods">
+                Bar chart of illustrative values.
+              </canvas>
+            </div>
+
+            <p class="chart-footnote" id="bar-chart-footnote">
+              All values are fictional demonstration data.
+            </p>
+          </article>
+
+          <article class="surface chart-card">
+            <div class="chart-heading">
+              <div>
+                <span class="mini-label">COMPOSITION ANALYSIS</span>
+                <h3>Illustrative category mix</h3>
+              </div>
+              <span class="chart-icon purple-chart-icon"
+                    aria-hidden="true">◉</span>
+            </div>
+
+            <p class="chart-description">
+              Distribution of the selected dataset's displayed values.
+            </p>
+
+            <div class="chart-container doughnut-container">
+              <canvas id="doughnut-chart"
+                      role="img"
+                      aria-label="Doughnut chart showing the composition of illustrative values by category">
+                Doughnut chart of illustrative categories.
+              </canvas>
+            </div>
+
+            <p class="chart-footnote" id="doughnut-chart-footnote">
+              Percentages describe the illustrative data only.
+            </p>
+          </article>
+        </div>
+
+        <div class="surface data-table-card">
+          <div class="chart-heading">
+            <div>
+              <span class="mini-label">ACCESSIBLE DATA VIEW</span>
+              <h3>Values behind the charts</h3>
+            </div>
+          </div>
+
+          <div class="table-wrapper">
+            <table>
+              <caption id="data-table-caption">
+                Illustrative values shown in the charts
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Period</th>
+                  <th scope="col" id="table-category-one">Product A</th>
+                  <th scope="col" id="table-category-two">Product B</th>
+                  <th scope="col">Combined total</th>
+                </tr>
+              </thead>
+              <tbody id="analytics-table-body">
+                <tr>
+                  <td colspan="4">Loading illustrative data…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE AND EDUCATION -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">05 / BACKGROUND</p>
+          <h2>Education & <span class="gradient-text">experience.</span></h2>
+          <p>A clear overview of my academic background and professional journey.</p>
+        </div>
+
+        <div class="timeline-grid">
+          <div>
+            <h3 class="column-title">
+              <span class="column-title-icon">⌂</span> Education
+            </h3>
+
+            <article class="surface timeline-card">
+              <span class="timeline-marker"></span>
+              <span class="mini-label">EXPECTED GRADUATION · 2026</span>
+              <h3>Bachelor of Engineering</h3>
+              <p class="timeline-subtitle">
+                Computer Science and Engineering
+              </p>
+              <p>
+                Final-year undergraduate student developing a foundation
+                in computing, analytical problem-solving, and data-focused
+                career skills.
+              </p>
+              <p class="editable-note">
+                Institution name can be added here.
+              </p>
+            </article>
+          </div>
+
+          <div>
+            <h3 class="column-title">
+              <span class="column-title-icon purple-icon">↗</span>
+              Experience
+            </h3>
+
+            <article class="surface timeline-card experience-placeholder">
+              <span class="timeline-marker purple-marker"></span>
+              <span class="mini-label">EDITABLE SECTION</span>
+              <h3>Add relevant experience</h3>
+              <p>
+                Add verified internships, work experience, volunteering,
+                or relevant academic responsibilities here.
+              </p>
+              <p>
+                Include the actual organization, role, dates,
+                responsibilities, and measurable achievements where
+                applicable.
+              </p>
+              <p class="editable-note">
+                No employer or achievement has been assumed.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section section-alt" id="certifications">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">06 / CONTINUOUS LEARNING</p>
+          <h2>Certifications & <span class="gradient-text">learning.</span></h2>
+          <p>Credentials should reflect completed, verifiable learning.</p>
+        </div>
+
+        <div class="surface certifications-empty">
+          <div class="empty-icon" aria-hidden="true">✳</div>
+          <h3>Your next credential goes here.</h3>
+          <p>
+            No certifications have been added yet. Once you complete a
+            certification, add its exact name, issuing organization,
+            completion date, and verification link where available.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">07 / GET IN TOUCH</p>
+          <h2>Let's turn data into <span class="gradient-text">direction.</span></h2>
+          <p class="contact-description">
+            I am interested in opportunities to learn, contribute, and
+            grow in data analytics and business intelligence. Feel free
+            to explore my work or connect with me.
+          </p>
+        </div>
+
+        <div class="surface contact-card">
+          <a class="contact-item"
+             href="https://github.com/KarenInfanta"
+             target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon">GH</span>
+            <span>
+              <small>GITHUB</small>
+              <strong>Explore my repositories</strong>
+            </span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="contact-item" id="linkedin-link" href="#contact">
+            <span class="contact-icon purple-contact-icon">in</span>
+            <span>
+              <small>LINKEDIN</small>
+              <strong id="linkedin-label">Add LinkedIn profile</strong>
+            </span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="contact-item" id="email-link" href="#contact">
+            <span class="contact-icon">✉</span>
+            <span>
+              <small>EMAIL</small>
+              <strong id="email-label">Add email address</strong>
+            </span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <p class="contact-hint" id="contact-status" role="status">
+            Update your LinkedIn and email settings in script.js.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a class="brand footer-brand" href="#home">
+        <span class="brand-mark">KI</span>
+        <span>Karen Infanta<span class="brand-dot">.</span></span>
+      </a>
+
+      <p>
+        © <span id="current-year">2026</span> Karen Infanta.
+        Built with curiosity and code.
+      </p>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/KarenInfanta"
+           target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <noscript>
+    <p class="noscript-message">
+      JavaScript is required for interactive charts, project filters,
+      and mobile navigation. The main portfolio content remains available.
+    </p>
+  </noscript>
+</body>
+</html>
