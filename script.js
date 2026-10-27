@@ -636,84 +636,28 @@ function initializeAnalytics() {
    RESUME AVAILABILITY AND DOWNLOAD
    --------------------------------------------------------- */
 
-async function initializeResume() {
+function initializeResume() {
   const button = getElement("resume-button");
   const status = getElement("resume-status");
 
-  if (!button || !status) {
+  if (!button) {
     return;
   }
 
-  const resumePath = PORTFOLIO_CONFIG.resumePath;
+  // Use the resume path configured at the top of this file.
+  const resumeURL = new URL(
+    PORTFOLIO_CONFIG.resumePath,
+    window.location.href
+  );
 
-  button.href = resumePath;
-  button.setAttribute("download", "");
+  // Let the browser handle the download directly.
+  button.href = resumeURL.href;
+  button.setAttribute("download", "Karen_Infanta_Resume.pdf");
 
-  /*
-   * Checking the file over HTTP works when the website is served
-   * locally or hosted on GitHub Pages. Browsers may block fetch()
-   * for file:// URLs, so use a local HTTP server for testing.
-   */
-  try {
-    const response = await fetch(resumePath, {
-      method: "HEAD",
-      cache: "no-store"
-    });
-
-    if (!response.ok) {
-      status.textContent =
-        "Resume not added yet. Add your real PDF to assets/resume.pdf.";
-    } else {
-      status.textContent = "Your resume PDF is available.";
-    }
-  } catch (error) {
-    status.textContent =
-      "Resume availability could not be checked. Use a local HTTP server " +
-      "or GitHub Pages, and confirm that assets/resume.pdf exists.";
+  // Remove any old click handler by avoiding fetch-based downloads.
+  if (status) {
+    status.textContent = "Click below to download my resume.";
   }
-
-  button.addEventListener("click", async function (event) {
-    event.preventDefault();
-
-    status.textContent = "Checking your resume file…";
-
-    try {
-      const response = await fetch(resumePath, {
-        method: "GET",
-        cache: "no-store"
-      });
-
-      if (!response.ok) {
-        throw new Error("Resume file was not found.");
-      }
-
-      const blob = await response.blob();
-
-      if (blob.size === 0) {
-        throw new Error("Resume file is empty.");
-      }
-
-      const objectURL = URL.createObjectURL(blob);
-      const downloadLink = document.createElement("a");
-
-      downloadLink.href = objectURL;
-      downloadLink.download = "Karen_Infanta_Resume.pdf";
-
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      downloadLink.remove();
-
-      window.setTimeout(function () {
-        URL.revokeObjectURL(objectURL);
-      }, 1000);
-
-      status.textContent = "Your resume download has started.";
-    } catch (error) {
-      status.textContent =
-        "Resume unavailable. Add your actual PDF at assets/resume.pdf " +
-        "and try again.";
-    }
-  });
 }
 
 /* ---------------------------------------------------------
