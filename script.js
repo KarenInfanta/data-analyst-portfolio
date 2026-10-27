@@ -15,7 +15,7 @@ const PORTFOLIO_CONFIG = {
   github: "https://github.com/KarenInfanta",
   linkedin: "https://www.linkedin.com/in/karen-infanta-248040259/",
   email: "karen.infanta@gmail.com",
-  resumePath: "assets/resume.pdf"
+  resumePath: "resume.pdf"
 };
 
 /*
